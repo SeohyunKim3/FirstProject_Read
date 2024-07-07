@@ -239,6 +239,10 @@
         function showprompt() {
             prompt("연락처를 남겨주세요!");
         }
+        let person = prompt("성함을 알려주세요.")
+        if (person != null) {
+            document.getElementById("demo").innerHTML = "안녕하세요" + person + "! 재밌게 둘러보세요~!";
+        }
     </script>
 </head>
 
