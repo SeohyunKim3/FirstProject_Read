@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Project</title>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        }
+
+        .navigator {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 60px 20px;
+        }
+
+        .reportScroll {
+            display: flex;
+            height: 30px;
+            background-color: rgba(238, 241, 241, 0.50); 
+            padding: 10px 30px;
+            border-radius:50px;
+            gap: 20px;
+            align-items: center;
+            }
+            .reportScroll > button {
+            border-radius: 50%;
+            border: 2px solid #657B7B;
+            width: 30px;
+            height: 30px;
+            }
+            .header {
+                color: #4E5F5F;
+                font-weight: 400;
+                min-width: 50px;
+                text-align: center;
+            }
+
+        .previous {
+            background-color: white;
+            min-width:120px;
+            height: 40px;
+            border: 0.5px solid black; 
+            border-radius: 40px;
+        }
+        .previous:hover {
+            background-color: #EEF1F1;
+            cursor: pointer;
+        }
+        .morereport {
+            background-color: white;
+            min-width: 140px;
+            height: 40px;
+            border: 0.5px solid black; 
+            border-radius: 40px;
+        }
+        .morereport:hover {
+            background-color: #EEF1F1;
+            cursor: pointer;
+        }
+
+        .fifthReport {
+            background-color: #EEF1F1;
+            padding: 3%;
+            margin: 8%;
+            min-width: 800px; 
+            border-radius: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1400px;
+            gap: 10px;
+        }
+
+        .portion1 {
+            width: 56%; 
+        }
+
+        .section1 {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            gap: 30px; 
+            border-radius: 40px; 
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 2px 2px 15px 0px #D2DADA;
+        }
+        
+        .portion2 {
+            width: 42%;
+        }
+
+        .downloadReport {
+            color: white;
+            background-color: #3CC895;
+            border: none;
+            border-radius: 20px;
+            font-size: 22px;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 2px 2px 15px 0px #D2DADA;
+        }
+
+        .portion3 {
+            display: inline-flex;
+            padding: 35px 30px 41px 29px;
+            flex-direction: column;
+            align-items: center;
+            gap: 29px;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 2px 2px 15px 0px #D2DADA;
+        }
+
+        .section4 {
+        }
+    </style>
+
+<body>
+    <div class="navigator">
+        <a href="index.html">
+            <button class="previous">이전 화면</button>
+        </a>
+        <div class="reportScroll">
+            <button class="previousReport" onclick="showPreviousReport">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 23 18" fill="none">
+                    <path d="M10.6617 20L2 11M2 11L10.6617 2M2 11L20 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </button>
+            <p class="header">진단 5회차</p>
+            <button class="nextReport" onclick="showNextReport">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 18" fill="none">
+                    <path d="M11.3383 20L20 11M20 11L11.3383 2M20 11L2 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </button>
+        </div>
+        <button class="morereport" onclick="showAlert()">과거 진단 기록보기</button>
+    </div>
+    <div class="fifthReport">
+        <div class="portion1">
+            <div class="section1">
+                <p class="variable">레벨 7.7</p>
+                <p class="variableresult">진단 레벨 젼화</br>+0.5</p>
+                <p class="variable">1400점</p>
+                <p class="variableresult">진단 레벨 젼화</br>+0.5</p>
+            </div>
+            <div class="section2">
+
+            </div>
+        </div>
+        <div class="portion2">
+            <button class="downloadReport">진단 보고서 다운받기</button>
+        </div>
+        <div class="portion3">
+            <div class="section4">
+                <p>Text!!</p>
+            </div>
+        </div>
+    </div>
+</body>
