@@ -51,6 +51,18 @@
             background-color: #EEF1F1;
             cursor: pointer;
         }
+        .nextReport {
+            cursor: pointer;
+        }
+        .nextReport:hover {
+            background-color: #D2DADA; 
+        }
+        .previousReport {
+            cursor: pointer;
+        }
+        .previousReport:hover {
+            background-color: #D2DADA; 
+        }
         .morereport {
             background-color: white;
             min-width: 140px;
@@ -122,19 +134,30 @@
         }
     </style>
 
+    <script>
+        function showAlert() {
+            alert("과거 진단이 없습니다..ㅠ");
+        }
+        function showNextReport() {
+            alert("최신 결과입니다.");
+        }
+        function showPreviousReport() {
+            alert("로그인하고 과거 진단을 확인하세요.");
+        }
+    </script>
 <body>
     <div class="navigator">
         <a href="index.html">
             <button class="previous">이전 화면</button>
         </a>
         <div class="reportScroll">
-            <button class="previousReport" onclick="showPreviousReport">
+            <button class="previousReport" onclick="showPreviousReport()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 23 18" fill="none">
                     <path d="M10.6617 20L2 11M2 11L10.6617 2M2 11L20 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
             </button>
             <p class="header">진단 5회차</p>
-            <button class="nextReport" onclick="showNextReport">
+            <button class="nextReport" onclick="showNextReport()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 18" fill="none">
                     <path d="M11.3383 20L20 11M20 11L11.3383 2M20 11L2 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
