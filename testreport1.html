@@ -33,10 +33,6 @@
             width: 30px;
             height: 30px;
             }
-            .reportScroll > .nextReport {
-                border: none;
-                background-color: rgba(238, 241, 241, 0.1);
-            }
             .header {
                 color: #4E5F5F;
                 font-weight: 400;
@@ -56,6 +52,10 @@
             cursor: pointer;
         }
         .nextReport {
+            cursor: pointer;
+        }
+        .nextReport:hover {
+            background-color: #D2DADA; 
         }
         .previousReport {
             cursor: pointer;
@@ -215,23 +215,25 @@
         function showNextReport() {
             alert("최신 결과입니다.");
         }
+        function showPreviousReport() {
+            alert("로그인하고 과거 진단을 확인하세요.");
+        }
     </script>
-
 <body>
     <div class="navigator">
         <a href="index.html">
             <button class="previous">이전 화면</button>
         </a>
         <div class="reportScroll">
-            <button class="previousReport" onclick="window.location.href='testreport1.html'">
+            <button class="previousReport" onclick="showPreviousReport()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 23 18" fill="none">
                     <path d="M10.6617 20L2 11M2 11L10.6617 2M2 11L20 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
             </button>
-            <p class="header">진단 5회차</p>
-            <button class="nextReport" onclick="showNextReport()">
+            <p class="header">진단 4회차</p>
+            <button class="nextReport" onclick="window.location.href='testreport.html'"">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 18" fill="none">
-                    <path d="M11.3383 20L20 11M20 11L11.3383 2M20 11L2 11" stroke="#F5f5f5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.3383 20L20 11M20 11L11.3383 2M20 11L2 11" stroke="#657B7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </button>
         </div>
@@ -240,10 +242,10 @@
     <div class="fifthReport">
         <div class="portion1">
             <div class="section1">
-                <p class="variable">레벨 7.7</p>
-                <p class="variableresult">진단 레벨 젼화</br><span class="level">+0.5</span></p>
-                <p class="variable">1400점</p>
-                <p class="variableresult">진단 레벨 젼화</br><span class="level">+120점</span></p>
+                <p class="variable">레벨 6.7</p>
+                <p class="variableresult">진단 레벨 젼화</br><span class="level">+1.0</span></p>
+                <p class="variable">1240점</p>
+                <p class="variableresult">진단 레벨 젼화</br><span class="level">+180점</span></p>
             </div>
             <div class="section2">
                 <h2>종합 점수 추이</h2>
