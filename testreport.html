@@ -84,12 +84,11 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            max-width: 1400px;
             gap: 10px;
         }
 
         .portion1 {
-            width: 56%; 
+            width: 71%; 
         }
 
         .section1 {
@@ -100,13 +99,44 @@
             border-radius: 40px; 
             text-align: center;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 2px 2px 15px 0px #D2DADA;
         }
+            .section1 > p {
+                margin: 0px;
+            }
+            .variable {
+                background-color: rgba(219, 245, 236, 0.50);
+                padding: 16px 30px; 
+                border-radius: 50px;
+            }
+            .level {
+                color: #3CC895;
+                font-weight: 500;
+            }
+        .section2 {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 15px 0px #D2DADA;
+            display: flex;
+            flex-direction: column;
+        }
+            img {
+                transform: scale(0.8);
+            }
         
         .portion2 {
-            width: 42%;
+            width: 27%;
         }
+            .section3 {
+                background-color: white;
+                padding: 20px;
+                margin: 20px 0px;
+                border-radius: 20px;
+                box-shadow: 2px 2px 15px 0px #D2DADA;
+            }
 
         .downloadReport {
             color: white;
@@ -114,7 +144,7 @@
             border: none;
             border-radius: 20px;
             font-size: 22px;
-            padding: 20px;
+            padding: 14px;
             width: 100%;
             box-shadow: 2px 2px 15px 0px #D2DADA;
         }
@@ -131,7 +161,51 @@
         }
 
         .section4 {
+            color: #657B7B;
+            font-weight: 400;
+            font-size: 16px;
         }
+            .testtype {
+                color: #3CC895;
+            }
+
+        h3 {
+            color: #374343;
+            font-weight: 500;
+            font-size: 22px;
+            margin: 0px;
+        }
+
+        h2 {
+            color: #657B7B;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .section5 {
+            display: flex;
+            gap: 26px;
+        }
+        .section5 > div {
+            background-color: rgba(238, 241, 241, 0.40);
+            padding: 16px 16px;
+            border-radius: 20px;
+            width: 30%;
+        }
+        .nameOfTwoTypes {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 400;
+        }
+            .twotypes-2 {
+                color: #3CC895; 
+            }
+            .testtype-explanation {
+                color: #7E9595;
+                font-weight: 300;
+                font-size: 14px;
+            }
     </style>
 
     <script>
@@ -169,20 +243,67 @@
         <div class="portion1">
             <div class="section1">
                 <p class="variable">레벨 7.7</p>
-                <p class="variableresult">진단 레벨 젼화</br>+0.5</p>
+                <p class="variableresult">진단 레벨 젼화</br><span class="level">+0.5</span></p>
                 <p class="variable">1400점</p>
-                <p class="variableresult">진단 레벨 젼화</br>+0.5</p>
+                <p class="variableresult">진단 레벨 젼화</br><span class="level">+120점</span></p>
             </div>
             <div class="section2">
-
+                <h2>종합 점수 추이</h2>
+                <img src="./개인프젝/graph.svg">
             </div>
         </div>
         <div class="portion2">
             <button class="downloadReport">진단 보고서 다운받기</button>
+            <div class="section3">
+                <h2>5각 지표</h2>
+            </div>
         </div>
         <div class="portion3">
             <div class="section4">
-                <p>Text!!</p>
+                <h3>현재 문해력 유형은 <span class="testtype">신중한 앵무새(UKHA)</span> 입니다.</h3>
+                <p class="testtype-explanation">앵무새 (UKHA)는 열대 우림의 넓은 공간을 날아다니며 다양한 소리를 듣고 배워요. 앵무새는 스킴형으로 정보를 빠르게 훑어보고 추론을 통해 신중하게 결정을 내려요. 그들의 안정적인 결단력은 다른 동물들에게서 배운 정보를 토대로 해요.</p>
+            </div>
+            <div class="section5">
+                <div class="type1">
+                    <h2>읽기 유창성</h2>
+                    <div class="twotypes">
+                        <div class="nameOfTwoTypes">
+                            <p class="twotypes-1">단어 인식형 I</p>
+                            <p class="twotypes-2">읽기 유창형 U</p>
+                        </div>
+                        <p class="testtype-explanation">읽기 유창형(U)은 속도가 빠르고 규칙적인 패턴으로 지문을 읽는 편이에요. 어휘력보다 읽기 능력이 상대적으로 높아요.</p>
+                    </div>
+                </div>
+                <div class="type2">
+                    <h2>지식 습득</h2>
+                    <div class="twotypes">
+                        <div class="nameOfTwoTypes">
+                            <p class="twotypes-1">스킴형 K</p>
+                            <p class="twotypes-2">스캔형 C</p>
+                        </div>
+                        <p class="testtype-explanation">스킴형(K)은 글을 빠르게 훑는 유형으로, 넓고 얕은 읽기 영역을 가져요. 주로 글의 핵심 아이디어나 주제를 파악하는 데에 용이해요.</p>
+                    </div>
+                </div>
+                <div class="type3">
+                    <h2>지식 활용</h2>
+                    <div class="twotypes">
+                        <div class="nameOfTwoTypes">
+                            <p class="twotypes-1">직관형 N</p>
+                            <p class="twotypes-2">추론형 H</p>
+                        </div>
+                        <p class="testtype-explanation">추론형(H)은 이미 습득한 지식을 분석하고 판단하여 논리적인 추론을 통해 문제를 해결해요. 주어진 문제나 상황에서 숨겨진 패턴이나 관계를 잘 발견해요.</p>
+                    </div>
+                </div>
+                <div class="type4">
+                    <h2>의사결정</h2>
+                    <div class="twotypes">
+                        <div class="nameOfTwoTypes">
+                            <p class="twotypes-1">과감형 G</p>
+                            <p class="twotypes-2">안정형 A</p>
+                        </div>
+                        <p class="testtype-explanation">안정형(A)은 의사결정을 꼼꼼히 안정적으로 하는 편이에요. 필요한 내용을 재방문하거나 역행하는 횟수가 높아요.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
